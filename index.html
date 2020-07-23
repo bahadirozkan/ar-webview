@@ -47,29 +47,37 @@
                 ios-src="assets/scandy-pro-2020-07-14-t08-30-24-707-z-m.usdz"-->
   <!--"assets/RocketShip_1393.usdz"-->
   
-  <script type="text/javascript">
-    $('#changeImage').change(function(){
-    $('#image')[0].src = "/assets/"+this.value;
-  });
-  </script>
+   <script>
+      function val() {
+      d = document.getElementById("select_id").value;
+      return d
+      }
+   </script>
 
 </head>
 <body>
+  
+  <select onchange="val()" id="select_id">
+      <option value="assets/mars3.glb">1</option>
+      <option value="assets/RocketShip_1393.gltf">2</option>
+  </select>
+  
+  <!--
   <select id="changeImage">
     <option>mars3.glb</option>
     <option>RocketShip_1393.gltf</option>
     <option>emre.glb</option>
   </select>
   
-  <img id="image" src_input='/assets/mars3.glb'>
+  <img id="image" src_input='/assets/mars3.glb'> -->
   
-  <model-viewer src= src_input 
+  <model-viewer src= onchange="val();"
                 ios-src="assets/mars3.usdz"       
                 ar
                 auto-rotate 
                 camera-controls 
                 shadow-intensity="1" 
-                alt="A 3D model of a rocket" background-color="#70BCD1">
+                alt="Demo menu App" background-color="#70BCD1">
                   
   </model-viewer>
   
