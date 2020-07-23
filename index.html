@@ -46,10 +46,24 @@
   <!--src="assets/scandy-pro-2020-07-14-t08-30-24-707-z-m.glb" 
                 ios-src="assets/scandy-pro-2020-07-14-t08-30-24-707-z-m.usdz"-->
   <!--"assets/RocketShip_1393.usdz"-->
+  
+  <script type="text/javascript">
+    $('#changeImage').change(function(){
+    $('#image')[0].src = "/assets/"+this.value;
+  });
+  </script>
 
 </head>
 <body>
-  <model-viewer src="assets/mars3.glb" 
+  <select id="changeImage">
+    <option>mars3.glb</option>
+    <option>RocketShip_1393.gltf</option>
+    <option>emre.glb</option>
+  </select>
+  
+  <img id="image" src_input='/assets/mars3.glb'>
+  
+  <model-viewer src= src_input 
                 ios-src="assets/mars3.usdz"       
                 ar
                 auto-rotate 
@@ -59,13 +73,13 @@
                   
   </model-viewer>
   
-  <label for="countries">Choose a Meal:</label>
+  <!--<label for="countries">Choose a Meal:</label>
   <input list="countryList" id="countries" name="countries" />
   <datalist id="countryList">
     <option value="Meal A">
     <option value="Meal B">
     <option value="Meal C">
     <option value="Meal D">
-  </datalist>
+  </datalist> -->
 </body>
 </html>
