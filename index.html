@@ -50,8 +50,9 @@
    <script>
       function val() {
       d = document.getElementById("select_id").value;
-      return d
+      return d;
       }
+   val();
    </script>
 
 </head>
@@ -71,7 +72,7 @@
   
   <img id="image" src_input='/assets/mars3.glb'> -->
   
-  <model-viewer src= $("#select_id option:selected").text();
+  <model-viewer src= "val();"
                 ios-src="assets/mars3.usdz"       
                 ar
                 auto-rotate 
