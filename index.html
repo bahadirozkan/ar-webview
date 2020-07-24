@@ -18,7 +18,7 @@
   <!-- Loads <model-viewer> for modern browsers: 
   <script type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
-  </script>
+  </script>-->
 
   <!-- Loads <model-viewer> for old browsers like IE11: 
   <script nomodule
@@ -65,9 +65,10 @@
     const modelViewer = document.querySelector("model-viewer");
 
     window.switchSrc = (element, name) => {
-      const base = "../assets/ShopifyModels/" + name;
+      const base = "assets/" + name;
       modelViewer.src = base + '.glb';
       modelViewer.poster = base + '.png';
+      // modelViewer.ios-src = base + '.usdz';
       const slides = document.querySelectorAll(".slide");
       slides.forEach((element) => {element.classList.remove("selected");});
       element.classList.add("selected");
@@ -108,7 +109,7 @@
 
 <!--  <p id="select_id">Source: </p>-->
 
-  <model-viewer src="assets/mars3.glb" ios-src="assets/mars3.usdz" poster="assets/kutuk.gif" shadow-intensity="1" ar
+  <model-viewer src="assets/salata.glb" ios-src="assets/salata.usdz" poster="assets/salata.gif" shadow-intensity="1" ar
                 auto-rotate ar-scale="fixed" camera-controls alt="A 3D model carousel">
 
   <button slot="ar-button" id="ar-button">
@@ -121,15 +122,10 @@
 
   <div class="slider">
     <div class="slides">
-      <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('../assets/ShopifyModels/Chair.png');">
+      <button class="slide selected" onclick="switchSrc(this, 'salata')" style="background-image: url('assets/salata.png');">
 
-      </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('../assets/ShopifyModels/Mixer.png');">
+      </button><button class="slide" onclick="switchSrc(this, 'mars3')" style="background-image: url('assets/mars3.png');">
 
-      </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('../assets/ShopifyModels/GeoPlanter.png');">
-
-      </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../assets/ShopifyModels/ToyTrain.png');">
-
-      </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('../assets/ShopifyModels/Canoe.png');">
     </button></div>
   </div>
 </model-viewer>
