@@ -68,7 +68,7 @@
       const base = "assets/" + name;
       modelViewer.src = base + '.glb';
       modelViewer.poster = base + '.png';
-      // modelViewer.ios-src = base + '.usdz';
+      modelViewer.ios-src = base + '.usdz';
       const slides = document.querySelectorAll(".slide");
       slides.forEach((element) => {element.classList.remove("selected");});
       element.classList.add("selected");
@@ -117,7 +117,7 @@
   </button>
 
   <div id="ar-prompt">
-    <img src="../assets/hand.png">
+    <img src="assets/hand.png">
   </div>
 
   <div class="slider">
