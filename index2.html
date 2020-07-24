@@ -40,38 +40,6 @@
   <script src="../node_modules/focus-visible/dist/focus-visible.js" defer></script>
   <style>
 
-    #ar-button {
-      background-image: url(../assets/ic_view_in_ar_new_googblue_48dp.png);
-      background-repeat: no-repeat;
-      background-size: 20px 20px;
-      background-position: 12px 50%;
-      background-color: #fff;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 132px;
-      padding: 0px 16px 0px 40px;
-      font-family: Roboto Regular, Helvetica Neue, sans-serif;
-      font-size: 14px;
-      color:#4285f4;
-      height: 36px;
-      line-height: 36px;
-      border-radius: 18px;
-      border: 1px solid #DADCE0;
-    }
-
-    #ar-button:active {
-      background-color: #E8EAED;
-    }
-
-    #ar-button:focus {
-      outline: none;
-    }
-
-    #ar-button:focus-visible {
-      outline: 1px solid #4285f4;
-    }
-    
     body, html {
       height: 100%;
       font-size: 10pt;
@@ -157,20 +125,9 @@
     <select id="src">
       <option value="assets/mars3.glb">Option A</option>
       <option value="assets/RocketShip_1393.gltf">Option B</option>
-      <option value="assets/scandy-pro-2020-07-14-t08-30-24-707-z-m.glb">Brain Stem</option>
+      <option value="assets/scandy-pro-2020-07-14-t08-30-24-707-z-m.glb">Option C</option>
     </select><br/>
 
-    <label for="exposure">exposure:</label>
-    <input id="exposure" type="range" step="0.01" min="0" max="2" value="1">
-    <input id="exposureValue" value="1" class="number"><br/>
-
-    <label for="shadowIntensity">shadow-intensity:</label>
-    <input id="shadowIntensity" type="range" step="0.01" min="0" max="1" value="0">
-    <input id="shadowIntensityValue" value="0" class="number"><br/>
-
-    <label for="shadowSoftness">shadow-softness:</label>
-    <input id="shadowSoftness" type="range" step="0.01" min="0" max="1" value="1">
-    <input id="shadowSoftnessValue" value="1" class="number"><br/>
 
     <label for="autoRotate">auto-rotate:</label>
     <input id="autoRotate" type="checkbox"><br/><br/>
@@ -180,42 +137,8 @@
     <model-viewer id="loading-demo" autoplay camera-controls interaction-prompt="none"
       src="assets/mars3.glb" ios-src="assets/mars3.usdz" alt="A 3D model" >
 
-      <button slot="ar-button" id="ar-button">
-        View in your space
-      </button>
     </model-viewer>
-  </div>
 
-  <div class="footer">
-    <ul>
-	  <li class="attribution">
-        <a href="https://poly.google.com/view/dLHpzNdygsg">Astronaut</a> by <a href="https://poly.google.com/user/4aEd8rQgKu2">Poly</a>,
-        licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC-BY</a>.
-      </li>
-
-      <li class="attribution">
-        <a href="https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/DamagedHelmet">Damaged Helmet</a> by <a href="https://sketchfab.com/theblueturtle_">theblueturtle_</a>,
-        licensed under <a href="https://creativecommons.org/licenses/by-nc/3.0/us/">Creative Commons Attribution-NonCommercial</a>.
-	  </li>
-
-	  <li class="attribution">
-		<a href="https://github.com/mrdoob/three.js/tree/dev/examples/models/gltf/RobotExpressive">RobotExpressive</a> by <a href="https://www.patreon.com/quaternius">Tomás Laulhé</a>,
-		licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.
-	  </li>
-
-      <li class="attribution">
-        <a href="https://hdrihaven.com/hdri/?h=small_hangar_01">small_hangar_01_1k.jpg</a> by <a href="https://hdrihaven.com">HDRI Haven</a>,
-        licensed under <a href="https://hdrihaven.com/p/license.php">CC0</a>.
-      </li>
-
-      <li class="attribution">
-        <a href="https://hdrihaven.com/hdri/?h=whipple_creek_regional_park_04">whipple_creek_regional_park_04_1k.hdr</a> by <a href="https://hdrihaven.com">HDRI Haven</a>,
-        licensed under <a href="https://hdrihaven.com/p/license.php">CC0</a>.
-      </li>
-    </ul>
-    <div style="margin-top:24px;" class="copyright">©Copyright 2018-2020 Google Inc. Licensed under the Apache License 2.0.</div>
-    <div><a href="https://github.com/GoogleWebComponents/model-viewer">Github</a> ∙ <a href="https://model-viewer.glitch.me/">Glitch</a> ∙ <a href="https://github.com/GoogleWebComponents/model-viewer/issues">Bug report</a></div>
-  </div>
 
   <script type="module" src="./built/tester.js"></script>
   <script nomodule src="./built/tester-umd.js"></script>
