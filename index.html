@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no,
   minimum-scale=1.0, maximum-scale=1.0">
-  <link rel="stylesheet" href="examples.css">
+  <link rel="stylesheet" href="styles.css">
 
   <!-- 💁 Include both scripts below to support all browsers! -->
   
@@ -48,11 +48,6 @@
 </head>
 <body>
   
-<div class="sample">
-  <div id="demo-container-1" class="demo"></div>
-    <div class="content">
-      <div class="wrapper">
-
 
   <model-viewer src="assets/salata.glb" ios-src="assets/salata.usdz" poster="assets/salata.gif" shadow-intensity="1" ar
                 auto-rotate ar-scale="fixed" camera-controls alt="3D Menu App">
@@ -70,6 +65,8 @@
       <button class="slide selected" onclick="switchSrc(this, 'salata')" style="background-image: url('assets/salata.png');"></button>
 
       </button><button class="slide" onclick="switchSrc(this, 'mars3')" style="background-image: url('assets/mars3.png');"></button>
+    
+      </button><button class="slide" onclick="switchSrc(this, 'cilek')" style="background-image: url('assets/cilek.png');"></button>
 
     </div>
   </div>
@@ -210,10 +207,6 @@
     }
 
   </style>
-
-      </div>
-    </div>
-  </div>
 
 
 
