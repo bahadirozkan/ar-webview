@@ -49,8 +49,8 @@
 <body>
   
 
-  <model-viewer src="assets/salata.glb" ios-src="assets/salata.usdz" poster="assets/salata.gif" shadow-intensity="1" ar
-                auto-rotate ar-scale="fixed" camera-controls alt="3D Menu App">
+  <model-viewer src="assets/Nesquick.glb" ios-src="assets/Nesquick.usdz" poster="assets/Nesquick.png" shadow-intensity="0" 
+                exposure="0.16" ar auto-rotate ar-scale="fixed" camera-controls alt="3D Menu App">
 
   <button slot="ar-button" id="ar-button">
     View in your space
@@ -62,7 +62,9 @@
 
   <div class="slider">
     <div class="slides">
-      <button class="slide selected" onclick="switchSrc(this, 'salata')" style="background-image: url('assets/salata.png');"></button>
+      <button class="slide selected" onclick="switchSrc(this, 'Nesquick')" style="background-image: url('assets/Nesquick.png');"></button>
+      
+      <button class="slide" onclick="switchSrc(this, 'salata')" style="background-image: url('assets/salata.png');"></button>
 
       </button><button class="slide" onclick="switchSrc(this, 'mars3')" style="background-image: url('assets/mars3.png');"></button>
     
