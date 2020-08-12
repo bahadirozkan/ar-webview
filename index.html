@@ -49,7 +49,7 @@
 <body>
   
 
-  <model-viewer src="assets/Makarna2.glb" ios-src="assets/Makarna2.usdz" poster="assets/Makarna2.png" shadow-intensity="0" 
+  <model-viewer id="current" src="assets/Makarna2.glb" ios-src="assets/Makarna2.usdz" poster="assets/Makarna2.png" shadow-intensity="0" 
                 exposure="1" ar auto-rotate ar-scale="fixed" camera-controls alt="3D Menu App">
 
   <button slot="ar-button" id="ar-button">
@@ -74,7 +74,7 @@
   
   </script>
     <script type="module">
-    const modelViewer = document.querySelector("model-viewer");
+    const modelViewer = document.querySelector("model-viewer#current");
 
     window.switchSrc = (element, name) => {
       const base = "assets/" + name;
