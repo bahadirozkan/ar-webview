@@ -12,13 +12,13 @@
   <!-- NOTE: you must adjust the paths as appropriate for your project -->
     
   <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
-  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.4.4/webcomponents-loader.js"></script>
 
   <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
-  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+  <script src="https://unpkg.com/intersection-observer@0.11.0/intersection-observer.js"></script>
 
   <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
-  <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+  <script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
     
   <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
   <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
@@ -29,7 +29,8 @@
   
 
   <model-viewer src="assets/Makarna2.glb" ios-src="assets/Makarna2.usdz" poster="assets/Makarna2.png" shadow-intensity="0" 
-                exposure="1" ar auto-rotate ar-scale="auto" camera-controls alt="3D Menu App">
+                exposure="1" ar auto-rotate ar-scale="auto" camera-controls alt="3D Menu App" 
+                alt="Makarna" background-color="#70BCD1">
 
   <button slot="ar-button" id="ar-button">
     View in your space
@@ -62,6 +63,7 @@
       modelViewer.src = base + '.glb';
       modelViewer.iosSrc = base + '.usdz';
       modelViewer.poster = base + '.png';
+      modelViewer.alt = name;
       const slides = document.querySelectorAll(".slide");
       slides.forEach((element) => {element.classList.remove("selected");});
       element.classList.add("selected");
