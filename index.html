@@ -63,6 +63,7 @@
     const modelViewer = document.querySelector("model-viewer");
 
     window.switchSrc = (element, name) => {
+      window.location='http://www.google.com';
       const base = "assets/" + name;
       modelViewer.src = base + '.glb';
       modelViewer.iosSrc = base + '.usdz';
