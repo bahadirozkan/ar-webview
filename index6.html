@@ -26,19 +26,6 @@
 
 </head>
 <body>
-    <script>
-        function getURL() {
-            alert("The URL of this page is: " + window.location.href);
-        }
-    </script>
-
-    <script> 
-        function fun(id) { 
-            var url= document.getElementById(id).value; 
-            document.write("Redirecting to the url in 3 seconds..."); 
-            setTimeout(function(){window.location = url;}, 3000); 
-        } 
-    </script> 
 
     <model-viewer src="assets/salata.glb" ios-src="assets/salata.usdz" poster="assets/salata.png" shadow-intensity="0" 
                     exposure="1" ar auto-rotate ar-scale="auto" camera-controls alt="salata" 
@@ -55,11 +42,19 @@
 
     </model-viewer>
 
-    <button type="2" onclick = "fun(2)">/button>
-
-    <a href="url">3</a>
-    <a href="url">4</a>
-    <a href="url">5</a>
+    <script>
+        function getURL(id) {
+            alert("The URL of this page is: " + window.location.href + id);
+            window.location = window.location.href + id;
+            
+        }
+    </script>
+        
+         
+    <button type="button" onclick="getURL(id='/2.html');">2</button>
+    <button type="button" onclick="getURL(id='/3.html');">3</button>
+    <button type="button" onclick="getURL(id='/4.html');">4</button>
+    <button type="button" onclick="getURL(id='/5.html');">5</button>
     
     <style>
         /* This keeps child nodes hidden while the element loads */
