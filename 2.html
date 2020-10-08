@@ -48,9 +48,13 @@
             window.location = (window.location+'').replace('/2.html', '/' + id + '.html');
             
         }
+
+        function gotoIndex() {
+            window.location = (window.location+'').replace('/2.html', '');
+        }
     </script>
          
-    <button type="button" onclick="changeURL(id='index');">1</button>
+    <button type="button" onclick="gotoIndex();">1</button>
     <button type="button" onclick="changeURL(id='3');">3</button>
     <button type="button" onclick="changeURL(id='4');">4</button>
     <button type="button" onclick="changeURL(id='5');">5</button>
