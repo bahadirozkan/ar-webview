@@ -41,6 +41,20 @@
 
 
     </model-viewer>
+
+    <script>
+        function getURL(id) {
+            // alert("The URL of this page is: " + window.location.href + id);
+            window.location = window.location.href + id;
+            
+        }
+    </script>
+        
+    <button type="button" onclick="getURL(id='1.html');">1</button>
+    <button type="button" onclick="getURL(id='2.html');">2</button>
+    <button type="button" onclick="getURL(id='4.html');">4</button>
+    <button type="button" onclick="getURL(id='5.html');">5</button>
+    <button type="button" onclick="getURL(id='6.html');">6</button>
     
     <style>
         /* This keeps child nodes hidden while the element loads */
@@ -62,7 +76,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 132px;
+        bottom: 32px; /* original: 132px */
         padding: 0px 16px 0px 40px;
         font-family: Roboto Regular, Helvetica Neue, sans-serif;
         font-size: 14px;
