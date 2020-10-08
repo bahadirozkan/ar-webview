@@ -43,18 +43,18 @@
     </model-viewer>
 
     <script>
-        function getURL(id) {
+        function changeURL(id) {
             // alert("The URL of this page is: " + window.location.href + id);
-            window.location = window.location.href + id;
+            window.location = (window.location+'').replace('/5.html', '/' + id + '.html');
             
         }
     </script>
-        
-    <button type="button" onclick="getURL(id='1.html');">1</button>
-    <button type="button" onclick="getURL(id='2.html');">2</button>
-    <button type="button" onclick="getURL(id='3.html');">3</button>
-    <button type="button" onclick="getURL(id='4.html');">4</button>
-    <button type="button" onclick="getURL(id='6.html');">6</button>
+         
+    <button type="button" onclick="changeURL(id='index');">1</button>
+    <button type="button" onclick="changeURL(id='2');">2</button>
+    <button type="button" onclick="changeURL(id='3');">3</button>
+    <button type="button" onclick="changeURL(id='4');">4</button>
+    <button type="button" onclick="changeURL(id='6');">6</button>
     
     <style>
         /* This keeps child nodes hidden while the element loads */
