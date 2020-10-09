@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, user-scalable=no,
   minimum-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  
+
   <!-- The following libraries and polyfills are recommended to maximize browser support -->
   <!-- NOTE: you must adjust the paths as appropriate for your project -->
-    
+
   <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
   <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.4.4/webcomponents-loader.js"></script>
 
@@ -19,7 +19,7 @@
 
   <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
   <script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
-    
+
   <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
   <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 
@@ -27,14 +27,14 @@
 </head>
 <body>
 
-    <model-viewer src="assets/manti.glb" ios-src="assets/manti.usdz" poster="assets/manti.png" shadow-intensity="0" 
-                    exposure="1" ar auto-rotate ar-scale="auto" camera-controls alt="manti" 
+    <model-viewer src="assets/manti.glb" ios-src="assets/manti.usdz" poster="assets/manti.png" shadow-intensity="0"
+                    exposure="1" ar auto-rotate ar-scale="auto" camera-controls alt="manti"
                     background-color="#70BCD1">
 
     <button slot="ar-button" id="ar-button">
         View in your space
     </button>
-        
+
     <div id="ar-prompt">
         <img src="assets/hand.png">
     </div>
@@ -46,20 +46,20 @@
         function changeURL(id) {
             // alert("The URL of this page is: " + window.location.href + id);
             window.location = (window.location+'').replace('/4.html', '/' + id + '.html');
-            
+
         }
 
         function gotoIndex() {
             window.location = (window.location+'').replace('/4.html', '');
         }
     </script>
-         
-    <button type="button" onclick="gotoIndex;">1</button>
+
+    <button type="button" onclick="gotoIndex();">1</button>
     <button type="button" onclick="changeURL(id='2');">2</button>
     <button type="button" onclick="changeURL(id='3');">3</button>
     <button type="button" onclick="changeURL(id='5');">5</button>
     <button type="button" onclick="changeURL(id='6');">6</button>
-    
+
     <style>
         /* This keeps child nodes hidden while the element loads */
         :not(:defined) > * {
@@ -173,7 +173,7 @@
         }
 
     </style>
-    
+
     <script type="module"
         src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
     <script nomodule
